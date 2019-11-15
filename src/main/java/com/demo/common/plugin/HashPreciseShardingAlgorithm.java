@@ -9,6 +9,7 @@ import org.apache.shardingsphere.api.sharding.standard.PreciseShardingValue;
 import java.util.Collection;
 
 /**
+ * @author : tomatocc
  * 分表策略
  */
 public class HashPreciseShardingAlgorithm implements PreciseShardingAlgorithm<String> {

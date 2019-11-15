@@ -4,9 +4,9 @@ import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
 
 /**
- * 
+ * @author : tomatocc
  * BlogInterceptor
- * 此拦截器仅做为示例展示，在本 demo 中并不需要
+ * 此拦截器仅做为示例展示
  */
 public class BlogInterceptor implements Interceptor {
 	

@@ -2,6 +2,7 @@ package com.demo.common.plugin;
 import	java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * @author : tomatocc
  * 分表缓存kit
  */
 public class ShardingCacheKit {

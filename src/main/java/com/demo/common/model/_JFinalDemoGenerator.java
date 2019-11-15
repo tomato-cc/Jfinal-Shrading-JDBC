@@ -8,7 +8,7 @@ import com.jfinal.plugin.activerecord.generator.Generator;
 import com.jfinal.plugin.druid.DruidPlugin;
 
 /**
- * 
+ * @author : tomatocc
  * 在数据库表有任何变动时，运行一下 main 方法，极速响应变化进行代码重构
  */
 public class _JFinalDemoGenerator {

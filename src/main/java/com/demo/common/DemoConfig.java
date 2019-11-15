@@ -27,6 +27,7 @@ import org.apache.shardingsphere.api.config.sharding.strategy.StandardShardingSt
 import org.apache.shardingsphere.core.constant.properties.ShardingPropertiesConstant;
 
 /**
+ * @author : tomatocc
  * 程序入口
  */
 public class DemoConfig extends JFinalConfig {

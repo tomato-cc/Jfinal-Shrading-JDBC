@@ -13,6 +13,7 @@ import javax.sql.DataSource;
 import java.util.Map;
 
 /**
+ * @author : tomatocc
  * 分表插件数据源配置
  */
 public class ShardingDruidPlugin implements IPlugin, IDataSourceProvider {

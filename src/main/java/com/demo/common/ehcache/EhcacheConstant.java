@@ -1,5 +1,9 @@
 package com.demo.common.ehcache;
 
+/**
+ * @author : tomatocc
+ *
+ */
 public class EhcacheConstant {
 
     /**
