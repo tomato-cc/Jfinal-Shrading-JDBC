@@ -1,0 +1,21 @@
+<ehcache>	
+<!--
+缓存到硬盘的路径
+-->
+<diskStore path="java.io.tmpdir" />
+<defaultCache maxElementsInMemory="1000" 
+eternal="false" 
+timeToIdleSeconds="300" 
+timeToLiveSeconds="300" 
+overflowToDisk="false" />
+
+<!--分表缓存15min-->
+<cache name="EHCACHE_CONSTANT_SHARDING"
+  maxElementsInMemory="10000"
+  maxElementsOnDisk="100000"
+  eternal="false"
+  timeToLiveSeconds ="900"
+  overflowToDisk="false"
+  diskPersistent="false"
+/>
+</ehcache>

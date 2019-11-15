@@ -1,0 +1,124 @@
+
+2019-11-15 13:42:10
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+com.jfinal.plugin.activerecord.ActiveRecordException: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:55)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:226)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:59)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:63)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:111)
+	at io.undertow.servlet.core.ManagedFilter.createFilter(ManagedFilter.java:80)
+	at io.undertow.servlet.core.DeploymentManagerImpl$2.call(DeploymentManagerImpl.java:591)
+	at io.undertow.servlet.core.DeploymentManagerImpl$2.call(DeploymentManagerImpl.java:556)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:42)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.core.DeploymentManagerImpl.start(DeploymentManagerImpl.java:598)
+	at com.jfinal.server.undertow.UndertowServer.configHttp(UndertowServer.java:284)
+	at com.jfinal.server.undertow.UndertowServer.doStart(UndertowServer.java:262)
+	at com.jfinal.server.undertow.UndertowServer.start(UndertowServer.java:159)
+	at com.jfinal.server.undertow.UndertowServer.start(UndertowServer.java:84)
+	at com.demo.common.DemoConfig.main(DemoConfig.java:40)
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.apache.shardingsphere.core.parse.antlr.rule.jaxb.loader.filler.FillerRuleDefinitionEntityLoader.load(FillerRuleDefinitionEntityLoader.java:40)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ParsingRuleRegistry.initParserRuleDefinition(ParsingRuleRegistry.java:99)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ParsingRuleRegistry.initCommonParserRuleDefinition(ParsingRuleRegistry.java:63)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ParsingRuleRegistry.init(ParsingRuleRegistry.java:56)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ShardingParsingRuleRegistry.getInstance(ShardingParsingRuleRegistry.java:47)
+	at org.apache.shardingsphere.core.parse.antlr.AntlrParsingEngine.<init>(AntlrParsingEngine.java:58)
+	at org.apache.shardingsphere.core.parse.old.parser.sql.SQLParserFactory.newInstance(SQLParserFactory.java:75)
+	at org.apache.shardingsphere.core.parse.SQLParsingEngine.parse(SQLParsingEngine.java:61)
+	at org.apache.shardingsphere.core.route.router.sharding.ParsingSQLRouter.parse(ParsingSQLRouter.java:78)
+	at org.apache.shardingsphere.core.route.StatementRoutingEngine.route(StatementRoutingEngine.java:56)
+	at org.apache.shardingsphere.core.SimpleQueryShardingEngine.route(SimpleQueryShardingEngine.java:60)
+	at org.apache.shardingsphere.core.BaseShardingEngine.shard(BaseShardingEngine.java:64)
+	at org.apache.shardingsphere.shardingjdbc.jdbc.core.statement.ShardingStatement.shard(ShardingStatement.java:256)
+	at org.apache.shardingsphere.shardingjdbc.jdbc.core.statement.ShardingStatement.executeQuery(ShardingStatement.java:90)
+	at com.jfinal.plugin.activerecord.TableBuilder.doBuild(TableBuilder.java:71)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:47)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.jfinal.server.undertow.hotswap.HotSwapClassLoader.loadClass(HotSwapClassLoader.java:83)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 37 more
+
+2019-11-15 13:45:19
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+com.jfinal.plugin.activerecord.ActiveRecordException: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:55)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:226)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:59)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:63)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:111)
+	at io.undertow.servlet.core.ManagedFilter.createFilter(ManagedFilter.java:80)
+	at io.undertow.servlet.core.DeploymentManagerImpl$2.call(DeploymentManagerImpl.java:591)
+	at io.undertow.servlet.core.DeploymentManagerImpl$2.call(DeploymentManagerImpl.java:556)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:42)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.core.DeploymentManagerImpl.start(DeploymentManagerImpl.java:598)
+	at com.jfinal.server.undertow.UndertowServer.configHttp(UndertowServer.java:284)
+	at com.jfinal.server.undertow.UndertowServer.doStart(UndertowServer.java:262)
+	at com.jfinal.server.undertow.UndertowServer.start(UndertowServer.java:159)
+	at com.jfinal.server.undertow.UndertowServer.start(UndertowServer.java:84)
+	at com.demo.common.DemoConfig.main(DemoConfig.java:40)
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at org.apache.shardingsphere.core.parse.antlr.rule.jaxb.loader.filler.FillerRuleDefinitionEntityLoader.load(FillerRuleDefinitionEntityLoader.java:40)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ParsingRuleRegistry.initParserRuleDefinition(ParsingRuleRegistry.java:99)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ParsingRuleRegistry.initCommonParserRuleDefinition(ParsingRuleRegistry.java:63)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ParsingRuleRegistry.init(ParsingRuleRegistry.java:56)
+	at org.apache.shardingsphere.core.parse.antlr.rule.registry.ShardingParsingRuleRegistry.getInstance(ShardingParsingRuleRegistry.java:47)
+	at org.apache.shardingsphere.core.parse.antlr.AntlrParsingEngine.<init>(AntlrParsingEngine.java:58)
+	at org.apache.shardingsphere.core.parse.old.parser.sql.SQLParserFactory.newInstance(SQLParserFactory.java:75)
+	at org.apache.shardingsphere.core.parse.SQLParsingEngine.parse(SQLParsingEngine.java:61)
+	at org.apache.shardingsphere.core.route.router.sharding.ParsingSQLRouter.parse(ParsingSQLRouter.java:78)
+	at org.apache.shardingsphere.core.route.StatementRoutingEngine.route(StatementRoutingEngine.java:56)
+	at org.apache.shardingsphere.core.SimpleQueryShardingEngine.route(SimpleQueryShardingEngine.java:60)
+	at org.apache.shardingsphere.core.BaseShardingEngine.shard(BaseShardingEngine.java:64)
+	at org.apache.shardingsphere.shardingjdbc.jdbc.core.statement.ShardingStatement.shard(ShardingStatement.java:256)
+	at org.apache.shardingsphere.shardingjdbc.jdbc.core.statement.ShardingStatement.executeQuery(ShardingStatement.java:90)
+	at com.jfinal.plugin.activerecord.TableBuilder.doBuild(TableBuilder.java:71)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:47)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.jfinal.server.undertow.hotswap.HotSwapClassLoader.loadClass(HotSwapClassLoader.java:83)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 37 more

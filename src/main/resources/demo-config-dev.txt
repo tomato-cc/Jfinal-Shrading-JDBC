@@ -1,0 +1,9 @@
+# 主数据源
+master.jdbcUrl = jdbc:mysql://localhost/jfinal_demo?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+master.user = root
+master.password =123456
+
+## 分表规则 ：对t_blog进分表，分表规则为根据id进行分表,共分为8张真实表
+sharding = t_blog:8:id
+
+devMode = true

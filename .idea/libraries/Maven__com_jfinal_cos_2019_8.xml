@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jfinal:cos:2019.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../workspace/repository/com/jfinal/cos/2019.8/cos-2019.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../workspace/repository/com/jfinal/cos/2019.8/cos-2019.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../workspace/repository/com/jfinal/cos/2019.8/cos-2019.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
