@@ -55,7 +55,7 @@
     <dependency>
     	<groupId>com.jfinal</groupId>
     	<artifactId>jfinal</artifactId>
-    	<version>4.6</version>
+    	<version>4.9.11</version>
     </dependency>
     
     <!-- 避免控制台输出如下提示信息：
